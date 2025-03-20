@@ -3,7 +3,10 @@
 ## 介绍
 **每日任务追踪器** 是一个简单直观的任务管理应用，基于 **Tkinter** 构建。它帮助用户管理每日任务，跟踪完成情况，并通过 **贡献式热力图** 可视化任务进度。
 *本项目主要为个人使用，可能存在较多bug和错误
-![image](https://github.com/user-attachments/assets/026bcf01-92ee-4ba9-85a0-ca7e4cf2ef2b)
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/7d45e799-8bc1-4d2b-be60-c15e1ebe0241" alt="每日任务追踪器界面" width="600">
+</p>
 
 
 ## 功能特点
@@ -27,7 +30,9 @@
 5. **查看任务进度热力图**
    - 悬停在日期上可查看任务完成情况。
    - 使用下拉框切换不同年份的数据。
-![image](https://github.com/user-attachments/assets/f074104b-00d5-43e7-bf37-45b6620b4d21)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f074104b-00d5-43e7-bf37-45b6620b4d21" alt="任务热力图示例" width="600">
+</p>
 
 
 ## 数据存储方式
