@@ -5,7 +5,7 @@
 *本项目主要为个人使用，可能存在较多bug和错误
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/7d45e799-8bc1-4d2b-be60-c15e1ebe0241" alt="每日任务追踪器界面" width="600">
+  <img src="https://github.com/user-attachments/assets/7d45e799-8bc1-4d2b-be60-c15e1ebe0241" alt="每日任务追踪器界面" width="200">
 </p>
 
 
