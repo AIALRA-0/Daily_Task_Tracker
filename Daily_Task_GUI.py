@@ -45,6 +45,7 @@ class TaskManager:
         self.create_widgets()
         self.load_tasks()
         self.draw_contribution_map()
+        self.schedule_date_check()
 
     # 调整窗口
     def adjust_height(self):
@@ -569,6 +570,23 @@ class TaskManager:
             year = date.split("-")[0]
             years.add(year)
         return sorted(years, reverse=True)  # 最新年份优先
+    
+    def schedule_date_check(self):
+        """每分钟检查日期是否变化，若变化则刷新 UI 并清除任务勾选"""
+        current_date = datetime.date.today().isoformat()
+        if current_date != self.today:
+            self.today = current_date
+            self.date_label.config(text=f"📅 今日日期: {self.today}")
+            self.data["history"].setdefault(self.today, {})  # 初始化今日数据为空
+            for task in self.data["tasks"]:
+                self.data["history"][self.today][task] = 0
+            save_data(self.data)
+            self.load_tasks()
+            self.draw_contribution_map()
+            print(f"🕒 日期已更新为 {self.today}，已清空勾选状态")
+    
+        # 再次安排下一次检查（60秒后）
+        self.root.after(60000, self.schedule_date_check)
 
 
 def generate_test_data():
